@@ -1,0 +1,160 @@
+@charset "UTF-8";
+/*基本变量*/
+/************
+ * 基本默认值
+ ************/
+html {
+  font-size: 100%;
+  font-family: "微软雅黑";
+  -webkit-touch-callout: none;
+  /*系统默认菜单被禁用*/
+  /* 会取消drag事件 */
+  /*-webkit-user-select:none; webkit浏览器*/
+  /*-khtml-user-select:none; 早期浏览器*/
+  /*-moz-user-select:none;火狐*/
+  /*-ms-user-select:none; IE10*/
+  /*user-select:none;*/ }
+
+*::-webkit-scrollbar {
+  width: 6px !important; }
+
+*::-webkit-scrollbar-button:start:decrement, *::-webkit-scrollbar-button:end:increment {
+  height: 0;
+  background-color: transparent; }
+
+*::-webkit-scrollbar-corner {
+  background-color: transparent; }
+
+*::-webkit-scrollbar-thumb:vertical {
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.2); }
+
+/************
+ * 自定义页面样式
+ ************/
+body {
+  font-size: .875em;
+  line-height: 1.5;
+  color: #333;
+  max-width: 2000px;
+}
+
+header{}
+.header-box{
+  padding: 7px 0 7px 15px;
+  overflow: hidden;
+  height: 54px;
+}
+header .l{
+  width: 50%;
+  float: left;
+}
+header .logo{
+  float: left;
+}
+header .logo a{
+  display: block;
+  margin-right: .7em;
+  height: 40px;
+  width: 80px;
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-position: left center
+-webkit-background-size: 80px 40px;
+  background-size: 80px 40px;
+}
+header .l .title{
+  float: right;
+}
+
+header .r{
+  width: 50%;
+  float: right;
+}
+header .r .progress{
+  float: left;
+  margin-left: 5em;
+}
+header .r nav{
+  float: right;
+  margin-right: 2em;
+}
+
+
+.main{
+
+}
+.main nav{
+  background-color: #E9E9E9;
+  display: flex;
+  height: calc(100vh - 92px);
+  width: 52px;
+
+}
+.main nav li{
+
+}
+
+.main .page{
+  display: flex;
+  height: calc(100vh - 92px);
+  margin-left: -52px;
+  box-sizing: border-box;
+  padding-left: 52px;
+}
+
+
+
+.footer-box{
+  text-align: center;
+  height: 38px;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 62.5em) and (min-width: 34.375em) {
+}
+
+/************
+ * 打印样式
+ ************/
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: "(" attr(href) ")"; }
+  abbr[title]:after {
+    content: "(" attr(title) ")"; }
+  /*使用#和javascript的超链接不打印href*/
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+  pre,
+  blockquote {
+    border: 1px solid #999999;
+    page-break-inside: avoid;
+    /*opera*/ }
+  thead {
+    display: table-header-group; }
+  tr, img {
+    page-break-inside: avoid; }
+  img {
+    min-width: 100% !important; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    /*分页底部保留最少行数*/
+    widows: 3;
+    /*分页顶部保留最少行数*/ }
+  h2,
+  h3 {
+    page-break-after: avoid; } }
